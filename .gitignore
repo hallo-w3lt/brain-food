@@ -1,0 +1,5 @@
+*.user
+
+###< symfony/framework-bundle ###
+/.idea/
+/.vsc/
