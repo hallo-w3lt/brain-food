@@ -19,11 +19,8 @@ std::vector<std::string> solution(const std::string& source, size_t group = 2){
         std::string slice{source.substr(counter, group)};
         if (slice.length() < group)
         {
-            std::string last(group - slice.length(), '_');
-            for (const auto &item: last)
-            {
-                slice.push_back(item);
-            }
+            const std::string last(group - slice.length(), '_');
+            std::for_each(last.begin(), last.end(), [&](const auto& c){slice.push_back(c);});
         }
 
         slices.push_back(slice);
