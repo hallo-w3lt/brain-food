@@ -12,7 +12,6 @@
 // do_test("abcdefg", {"ab", "cd", "ef", "g_"});
 // do_test("abcdefg", {"abc", "def", "g__"});
 std::vector<std::string> solution(const std::string& source, size_t group = 2){
-
     std::vector<std::string> slices {};
     size_t counter{0};
     while (counter < source.size() && group > 0)
@@ -38,8 +37,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    const std::string word {"HalloW3lt"};
-    std::vector<std::string> slices{solution(word)};
+    const std::string source {"HalloW3lt"};
+    std::vector<std::string> slices{solution(source)};
 
     for (const auto& slice: slices) {
         std::cout << slice << std::endl;
