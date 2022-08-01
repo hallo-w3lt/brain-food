@@ -13,7 +13,7 @@
 // do_test("abcdefg", {"abc", "def", "g__"});
 std::vector<std::string> solution(const std::string& source, size_t group = 2){
 
-    std::vector<std::string> slices;
+    std::vector<std::string> slices {};
     size_t counter{0};
     while (counter < source.size() && group > 0)
     {
