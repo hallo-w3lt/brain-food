@@ -22,7 +22,7 @@
 //         Assert::That(add_binary(51, 12), Equals("111111"), ExtraMessage("Invalid result for a = 51, b = 12"));
 //     }
 // };
-std::string solution(uint64_t a, uint64_t b) {
+std::string solution(const uint64_t a, const uint64_t b) {
     std::string mask {std::bitset<128>(a + b).to_string()};
     const std::string result {mask.erase(0, std::min(mask.find_first_not_of('0'), mask.size()))};
 
