@@ -14,10 +14,10 @@
 //     Assert::That(solution("abc", ""), Equals(true));
 //   }
 bool solution(std::string const &source, std::string const &ending) {
-    const size_t sizeSource {source.length()};
-    const size_t sizeEnding {ending.length()};
+    const size_t source_len {source.length()};
+    const size_t ending_len {ending.length()};
 
-    return sizeEnding <= sizeSource && sizeSource - source.rfind(ending) == sizeEnding;
+    return ending_len <= source_len && source_len - source.rfind(ending) == ending_len;
 }
 
 int main(int argc, char *argv[])
