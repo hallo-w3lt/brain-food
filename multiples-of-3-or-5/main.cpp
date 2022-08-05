@@ -13,15 +13,18 @@
 // Note: If the number is a multiple of both 3 and 5, only count it once.
 int solution(int number)
 {
-    const auto multiples = [&]{
-        int sum {0};
-        for(auto i {3}; i < number; ++i) {
-            if (0 == i % 3 || 0 == i % 5) {
-                sum += i;
+    const auto multiples
+    {
+        [&]{
+            int sum {0};
+            for(auto i {3}; i < number; ++i) {
+                if (0 == i % 3 || 0 == i % 5) {
+                    sum += i;
+                }
             }
-        }
 
-        return sum;
+            return sum;
+        }
     };
 
     return number >= 3 ? multiples() : 0;
