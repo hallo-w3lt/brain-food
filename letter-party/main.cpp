@@ -1,7 +1,7 @@
 /*
 * Copyright (c) 2022 - thamesis09 && @hallo_w3lt
 * IDE Qt Creator
-* challenge code taken on https://bit.ly/3BTPlAn
+* Challenge code taken on https://bit.ly/3BTPlAn
 */
 
 #include <QCoreApplication>
@@ -33,7 +33,9 @@ std::string solution(const std::vector<int>& people, const std::string& secret) 
             auto next {people.at(0)};
 
             for (auto it = secret.begin(); it != secret.end() - 1; ++it) {
-                message += secret.at(next);
+                // message.append(1, secret.at(next));
+                // message += secret.at(next);
+                message.push_back(secret.at(next));
                 next = people.at(next);
             }
 
@@ -48,7 +50,10 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    const std::vector<int> people = {3,2,0,1};
+    // const std::vector<int> people {5,2,0,1,6,4,8,3,7};
+    // const std::string secret {"cdeenetpi"}; // centipede
+
+    const std::vector<int> people {3,2,0,1};
     const std::string secret {"cdeo"}; // code
 
     std::cout << "solution: " << solution(people, secret) << std::endl;
