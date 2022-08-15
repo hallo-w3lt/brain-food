@@ -6,8 +6,6 @@
 
 #include <QCoreApplication>
 #include <iostream>
-#include <cmath>
-#include <memory>
 
 // Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
@@ -27,19 +25,17 @@
 // Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 // Output: 5
 
-struct TreeNode {
+struct TreeNode
+{
     int payload;
     TreeNode* left;
     TreeNode* right;
-    TreeNode(int n) : payload{n}, left{nullptr}, right{nullptr} {
-        // ...
-    }
+    TreeNode(int n) : payload{n}, left{nullptr}, right{nullptr} {}
 };
 
-TreeNode const* make() {
-
+TreeNode const* make()
+{
     // [3,5,1,6,2,0,8,null,null,7,4]
-
     TreeNode* root = new TreeNode(3);
 
     root->left = new TreeNode(5);
@@ -62,7 +58,8 @@ TreeNode const* solution(TreeNode const* root, int const p, int const q)
 {
     auto lca
     {
-        [&]()->TreeNode const* {
+        [&]()->TreeNode const*
+        {
             if (nullptr == root) { return nullptr; }
             if (p == root->payload || q == root->payload) { return root; }
 
