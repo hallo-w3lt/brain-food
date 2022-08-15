@@ -17,10 +17,10 @@
 // resend the message to the next position
 // until everyone attached the letter of their position
 
-// Example1: A=[3,2,0,1] y S='cdeo'
+// Example1: A=[3,2,0,1] and S='cdeo'
 // R: 'code'
 //
-// Example2: A=[5,2,0,1,6,4,8,3,7] y S='cdeenetpi'
+// Example2: A=[5,2,0,1,6,4,8,3,7] and S='cdeenetpi'
 // R: 'centipede'
 
 std::string solution(const std::vector<int>& people, const std::string& secret) {
@@ -32,7 +32,7 @@ std::string solution(const std::vector<int>& people, const std::string& secret) 
             std::string message {secret.at(0)};
             auto next {people.at(0)};
 
-            for (auto it = secret.begin(); it != secret.end() - 1; ++it) {
+            for (auto it {secret.begin()}; it != secret.end() - 1; ++it) {
                 // message.append(1, secret.at(next));
                 // message += secret.at(next);
                 message.push_back(secret.at(next));
@@ -50,8 +50,10 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    // const std::vector<int> people {5,2,0,1,6,4,8,3,7};
-    // const std::string secret {"cdeenetpi"}; // centipede
+#if 0
+    const std::vector<int> people {5,2,0,1,6,4,8,3,7};
+    const std::string secret {"cdeenetpi"}; // centipede
+#endif
 
     const std::vector<int> people {3,2,0,1};
     const std::string secret {"cdeo"}; // code
