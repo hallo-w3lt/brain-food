@@ -41,7 +41,7 @@ std::pair<std::size_t, std::size_t> solution(const std::vector<int>& numbers, co
     {
         [&]()->std::pair<std::size_t, std::size_t>
         {
-            for (int x {0}; x < static_cast<int>(numbers.size()); ++x) {
+            for (int x {0}; x < static_cast<int>(size); ++x) {
                 for (int y {x+1}; y < static_cast<int>(size); ++y) {
 
                     if (numbers[x] + numbers[y] == target){
