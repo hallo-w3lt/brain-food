@@ -7,7 +7,7 @@
 #include <QCoreApplication>
 #include <iostream>
 
-// With funtors, you no longer need to create a static variable to hold the value
+// With functors, you no longer need to create a static variable to hold the value in memory
 
 class Counter final
 {
