@@ -35,6 +35,7 @@ public:
 // implicit conversion from a Eur object
 std::string to_cents(Cent cents)
 {
+    // implicit conversion from a Cent object
     return std::to_string(cents);
 }
 
