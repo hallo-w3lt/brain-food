@@ -17,8 +17,7 @@ private:
 
 public:
     operator int() const {return m_cents;}
-
-    void setCents(int cents){ m_cents = cents;}
+    // void setCents(int cents){ m_cents = cents;} // no longer necessary
 };
 
 class Eur final
