@@ -1,3 +1,9 @@
+/*
+* Copyright (c) 2022 - @hallo_w3lt
+* IDE Qt Creator
+* Challenge by www.codewars.com
+*/
+
 #include <QCoreApplication>
 #include <iostream>
 
