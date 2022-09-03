@@ -46,6 +46,7 @@ std::string solution(int number){
         {
             std::string roman {};
             std::size_t i {size};
+
             while(number > 0)
             {
                 auto const [symbol, val] = table.at(i);
@@ -58,6 +59,7 @@ std::string solution(int number){
                 }
                 --i;
             }
+
             return roman;
         }
     };
