@@ -10,7 +10,7 @@
 class Cent final
 {
 public:
-    Cent(int cents = 0): m_cents{cents} {}
+    explicit Cent(int cents = 0): m_cents{cents} {}
 
 private:
     int m_cents {0};
@@ -23,7 +23,7 @@ public:
 class Eur final
 {
 public:
-    Eur(int eurs = 0): m_eurs {eurs} {}
+    explicit Eur(int eurs = 0): m_eurs {eurs} {}
 
 private:
     int m_eurs {0};
