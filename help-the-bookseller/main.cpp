@@ -114,9 +114,9 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     std::vector<std::string> const source {"CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"};
-    std::vector<std::string> const search {"A", "B", "C", "D"};
+    std::vector<std::string> const categories {"A", "B", "C", "D"};
 
-    std::cout << "solution: " << StockList::stockSummary(source, search) << std::endl;
+    std::cout << "solution: " << StockList::stockSummary(source, categories) << std::endl;
 
     return a.exec();
 }
