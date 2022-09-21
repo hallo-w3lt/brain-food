@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             {
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "oops, invalid input" << std::endl;
+                std::cout<<"try again"<<std::endl;
 
                 return false;
             }
@@ -48,8 +48,7 @@ int main(int argc, char *argv[])
     {
         std::cout << "Enter the first value: ";
         std::cin >> x;
-        if (is_valid()) { break; }
-        else { std::cout<<"try again"<<std::endl;  }
+        if (is_valid()) { break; }        
     }
 
     int y {0};
@@ -57,8 +56,7 @@ int main(int argc, char *argv[])
     {
         std::cout << "Enter the second value: ";
         std::cin >> y;
-        if (is_valid()) { break; }
-        else { std::cout<<"try again"<<std::endl;  }
+        if (is_valid()) { break; }        
     }
 
     int option {0};
