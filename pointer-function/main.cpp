@@ -46,15 +46,15 @@ int main(int argc, char *argv[])
     int x {0};
     while(true)
     {
-        std::cout << "Enter the first value: ";
+        std::cout << "Enter the first value [int]: ";
         std::cin >> x;
         if (is_valid()) { break; }        
     }
 
     int y {0};
     while(true)
-    {
-        std::cout << "Enter the second value: ";
+    {        
+        std::cout << "Enter the second value [int]: ";
         std::cin >> y;
         if (is_valid()) { break; }        
     }
