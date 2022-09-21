@@ -22,23 +22,26 @@ int multiplication(int x, int y)
     return x * y;
 }
 
-bool is_valid()
-{
-    if(std::cin.fail())
-    {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "oops, invalid input" << std::endl;
-
-        return false;
-    }
-
-    return true;
-}
-
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+
+    auto const is_valid
+    {
+        []()
+        {
+            if(std::cin.fail())
+            {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "oops, invalid input" << std::endl;
+
+                return false;
+            }
+
+            return true;
+        }
+    };
 
     int x {0};
     while(true)
