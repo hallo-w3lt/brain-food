@@ -8,10 +8,12 @@
 #include <iostream>
 
 // optional
-class Constraints
+class IConstraints
 {
-public:
-    virtual void implementation() = 0;
+public:        
+    virtual ~IConstraints() = default;
+
+    virtual void implementation() = 0;    
 };
 
 // the curiously recurring template pattern (CRTP)
@@ -25,7 +27,7 @@ public:
     }
 };
 
-class Stuff1 final: public Mixin<Stuff1>, public Constraints
+class Stuff1 final: public Mixin<Stuff1>, public IConstraints
 {
 public:
     void implementation() override
@@ -34,7 +36,7 @@ public:
     }
 };
 
-class Stuff2 final: public Mixin<Stuff2>, public Constraints
+class Stuff2 final: public Mixin<Stuff2>, public IConstraints
 {
 public:
     void implementation() override
