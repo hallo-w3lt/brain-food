@@ -45,6 +45,8 @@ public:
         return *this;
     }
 
+    smart_ptr& operator=(smart_ptr const& a) = delete;
+
     bool is_null() const {return nullptr == m_ptr;}
 
 private:
