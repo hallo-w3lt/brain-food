@@ -93,20 +93,20 @@ std::vector<std::string> split(std::string source, char delimiter = ' ')
 int parse_int(std::string& snumber) {
     std::replace(snumber.begin(), snumber.end(), '-', ' ');
     const auto words = split(snumber, ' ');
-    int value {0};
+    int number {0};
 
     for (const auto& word : words)
     {
-        if (const auto it = units.find(word); it != units.end())
+        if (const auto it {units.find(word)}; it != units.end())
         {
-            value += it->second;
+            number += it->second;
         }
-        if (const auto it = multipliers.find(word); it != multipliers.end())
+        if (const auto it {multipliers.find(word)}; it != multipliers.end())
         {
-            value += it->second * (value % it->second) - (value % it->second);
+            number += it->second * (number % it->second) - (number % it->second);
         }
     }
-    return value;
+    return number;
 }
 
 void test_parse_int() {
@@ -116,9 +116,11 @@ void test_parse_int() {
         {"twenty", 20},
         {"forty-six", 46},
         {"one hundred", 100},
-        {"two hundred and forty-six", 246}
+        {"two hundred and forty-six", 246},
+        {"seven hundred eighty-three thousand nine hundred and nineteen", 783919}
     };
-    for (auto& test : tests) {
+    for (auto& test : tests)
+    {
         std::cout << "Source: '" << test.first << "' Expected: " << test.second << " Output: " << parse_int(test.first) << std::endl;
     }
 }
