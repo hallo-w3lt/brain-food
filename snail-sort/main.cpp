@@ -47,7 +47,7 @@ std::ostream& operator<<(std::ostream& os, std::vector<int> const& source)
     return os;
 }
 
-std::vector<int> snail(const std::vector<std::vector<int>> &snail_map)
+std::vector<int> snail(std::vector<std::vector<int>> const& snail_map)
 {
     std::vector<int> result {};
     size_t rows {snail_map.size()};
