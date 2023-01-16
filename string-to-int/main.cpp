@@ -92,7 +92,7 @@ std::vector<std::string> split(std::string source, char delimiter = ' ')
 
 int parse_int(std::string& snumber) {
     std::replace(snumber.begin(), snumber.end(), '-', ' ');
-    const auto words = split(snumber, ' ');
+    const auto words {split(snumber, ' ')};
     int number {0};
 
     for (const auto& word : words)
