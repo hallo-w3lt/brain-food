@@ -1,3 +1,8 @@
+/*
+* Copyright (c) 2023 - @hallo_w3lt
+* IDE Qt Creator
+*/
+
 #include <QCoreApplication>
 #include <iostream>
 #include <charconv>
@@ -53,7 +58,7 @@ int main(int argc, char *argv[])
         std::cout << "index: : " << i << " value: : " << std::fixed << std::setprecision(2) << buffer[i] << std::endl;
     }
 
-    delete[] buffer;
+    delete[] buffer; // please don't forget
 
     return a.exec();
 }
