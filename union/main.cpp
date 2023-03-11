@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
 
 
     // You have to be careful with this:
+    std::cout << " --- " << std::endl;
     std::cout << " !! the radius of the circle is: " << shape.radio << std::endl;
 
     return a.exec();
