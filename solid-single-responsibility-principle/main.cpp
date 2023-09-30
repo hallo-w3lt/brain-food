@@ -55,9 +55,10 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    ToDo todo {"Dear Diary"};
-    todo.add_entry("I ate a bug");
-    todo.add_entry("I cried today");
+    ToDo todo {"My ToDo today"};
+    todo.add_entry("Buy coffee");
+    todo.add_entry("Make coffee");
+    todo.add_entry("Drink coffee");
 
     // Not good
     // todo.save("my-file.txt");
