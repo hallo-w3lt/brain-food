@@ -43,7 +43,7 @@ struct Flush
     static void save(const ToDo& todo, const std::string& filename)
     {
         std::ofstream ostrm(filename, std::ios::binary);
-        for (auto& e : todo.entries)
+        for (const auto& e : todo.entries)
         {
             ostrm << e << std::endl;
         }
