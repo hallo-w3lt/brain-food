@@ -1,10 +1,6 @@
 *.user
 
-###< id ###
 /.idea/
 /.vsc/
-###> id ###
 
-###< current working ###
-
-###> current working ###
+*/build/

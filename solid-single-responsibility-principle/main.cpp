@@ -5,6 +5,7 @@
 
 #include <QCoreApplication>
 #include <fstream>
+#include <iostream>
 
 /*
    SRP (Single Responsibility Principle): This principle states that a class should have a single responsibility or function within the system.
@@ -55,16 +56,21 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
+    std::cout << "Hello" << std::endl;
+
     ToDo todo {"My ToDo today"};
     todo.add_entry("Buy coffee");
     todo.add_entry("Make coffee");
     todo.add_entry("Drink coffee");
+
 
     // Not good
     // todo.save("my-file.txt");
 
     Flush flush;
     flush.save(todo, "my-todo-record.txt");
+
+
 
     return a.exec();
 }
