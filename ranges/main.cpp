@@ -1,3 +1,8 @@
+/*
+* Copyright (c) 2024 - @hallo_w3lt
+* IDE Qt Creator
+*/
+
 #include <iostream>
 #include <vector>
 #include <ranges>
@@ -14,6 +19,9 @@ int main() {
     for (int n : processed) {
         std::cout << std::format("result: {}\n\n", n);
     }
+
+    // Output: result: 4
+    // Output: result: 8
 
     return 0;
 }
